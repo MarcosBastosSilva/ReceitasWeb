@@ -22,7 +22,7 @@ const listagemReceitaComponent = (name: string, type: string, meal: any) => {
 function Receita() {
   const [meal, setMeal] = useState<unknown>({});
   console.log(window.location.href);
-  const id = window.location.href.split("/")[4];
+  const id = window.location.href.split("Receita/")[1];
   console.log(id);
   useEffect(() => {
     async function fetchData() {

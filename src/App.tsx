@@ -7,19 +7,18 @@ import Receita from "./components/Receita/Receita";
 import Letra from "./components/Letra/Letra";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-
 function App() {
   return (
     <>
       <div className="app">
-        <Router>
+        <Router basename="/ReceitasWeb">
           <Navbar />
           <Routes>
             <Route path="/" Component={RandomMeal} />
             <Route path="/Nome" Component={Nome} />
             <Route path="/Ingrediente" Component={Ingrediente} />
             <Route path="/Letra" Component={Letra} />
-            <Route path="/Receita/:id" Component={Receita}/>
+            <Route path="/Receita/:id" Component={Receita} />
           </Routes>
           <Footer />
         </Router>
