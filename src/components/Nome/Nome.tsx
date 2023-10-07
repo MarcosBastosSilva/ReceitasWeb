@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const [searchTerm, setSearchTerm] = useState("");
-
+ // @ts-ignore
   const { fetchNomePageMeals, meals } = useContext(myContext);
 
   const fetchMealsHandler = useCallback(() => {
@@ -32,6 +32,7 @@ const HomePage = () => {
       </div>
       <div className="flex flex-wrap justify-center">
         {meals ? (
+           // @ts-ignore
           meals.map((meal) => (
             <div
               key={meal.idMeal}

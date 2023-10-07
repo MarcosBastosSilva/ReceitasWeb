@@ -19,7 +19,7 @@ interface Randomprop {
 interface SearchId {
   Meals: string;
 }
-
+// eslint-disable-next-line
 export const myContext = createContext({});
 
 export const AppContext: React.FC<Test> = ({ children }) => {

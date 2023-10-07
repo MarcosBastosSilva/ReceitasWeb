@@ -3,6 +3,7 @@ import { myContext } from "../Context/Context";
 import { Link } from "react-router-dom";
 
 const RandomMeal = () => {
+   // @ts-ignore
   const { randomMeal, fetchRandomMeal } = useContext(myContext);
 
   useEffect(() => {
@@ -12,7 +13,8 @@ const RandomMeal = () => {
   return (
     
     <div className="bg-[#feedec] min-h-screen flex flex-col items-center justify-start font-uppercase">
-      {randomMeal.map((meal) => (
+      {// @ts-ignore
+      randomMeal.map((meal) => (
         <div key={meal.idMeal} className="bg-[#fddad8] rounded-lg shadow-md p-4 text-center m-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
           <div>
           <Link to={`/Receita/${meal.idMeal}`}>

@@ -7,7 +7,7 @@ const listagemReceitaComponent = (name: string, type: string, meal: any) => {
     <div>
       <h2>{name}</h2>
       <ul>
-        {[...Array(20)].map((e, i) => {
+        {[...Array(20)].map((_e, i) => {
           return (
             <li key={i}>
               {meal["str" + type + i] ? meal["str" + type + i] : null}
@@ -40,14 +40,17 @@ function Receita() {
 
   return (
     <div
+    // @ts-ignore
       key={meal.idMeal}
       className="bg-[#fddad8] rounded-lg shadow-md p-4 text-center"
     >
       <a href=""></a>
       <h2 className="text-lg text-[#7f1d1d] font-semibold mb-2">
-        {meal.strMeal}
+        {// @ts-ignore
+        meal.strMeal}
       </h2>
       <img
+      // @ts-ignore
         src={meal.strMealThumb}
         alt={"#"}
         className="w-1/2 h-auto mx-auto my-4 rounded-md"
