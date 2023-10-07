@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <div className="app">
-        <Router>
+        <Router basename="/ReceitasWeb">
           <Navbar />
           <Routes>
             <Route path="/" Component={RandomMeal} />
